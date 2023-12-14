@@ -54,6 +54,10 @@ header {
   text-align: center;
 }
 
+.photo-profile-name, .photo-profile-major {
+  visibility: hidden;
+}
+
 h2 {
   font-size: 1.6rem;
   border-bottom: 2px solid white;
@@ -161,4 +165,49 @@ footer span {
   font-size: 2rem;
   letter-spacing: 0.1rem;
   margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 1110px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .container.first {
+    width: 100%; 
+  }
+
+  main {
+    width: 100%; 
+  }
+
+  header {
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .photo-profile-wrap {
+    text-align: center;
+  }
+
+  .photo-profile-name, .photo-profile-major {
+    visibility: visible;
+  }
+
+}
+
+@media screen and (max-width: 990px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .photo-profile-name, .photo-profile-major {
+    font-size: 1.5em;
+  }
 }
